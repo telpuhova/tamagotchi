@@ -1,22 +1,31 @@
-# _tamagotchi_
+# tamagotchi
 
-#### _Tamagotchi app, 2/12/2018_
+Tamagotchi app, 2/12/2018
 
-#### By _**telpuhova**_
+**By Natalia Telpukhova**
 
 ## Description
 
-_An application that emulates a tamagotchi game._
+An application that emulates a tamagotchi game.
 
 ## Setup
 
-* _clone repository_
-* _open index.html in browser_
+* clone repository
+```
+$ git clone https://github.com/telpuhova/tamagotchi.git
+```
+* go into the cloned repo and run the following commands from your terminal:
+```
+$ npm install
+$ bower install
+$ gulp build --production
+$ gulp serve
+```
 
 ## Technologies Used
 
-_HTML, CSS, JavaScript, Node, npm, gulp, jasmine, karma, Bootstrap, jQuery_
+HTML, CSS, JavaScript, Node, npm, Gulp, Jasmine, Karma, Bootstrap, jQuery
 
 ### License
 
-Copyright (c) 2018 ****_telpuhova_****
+Copyright (c) 2018 Natalia Telpukhova
