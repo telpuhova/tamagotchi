@@ -10,47 +10,51 @@
   </head>
   <body>
     <div class="container">
-      <!-- <div class="api-response-test">
-        <p>api-response-test-paragraph1</p>
-        <p>api-response-test-paragraph2</p>
-      </div> -->
-      <!-- <p id="test"></p> -->
-
+      <h1>tamagotchi</h1>
 
       <p id="name">___</p>
       <p id="age">___</p>
 
+      <div class="gameplay">
 
-      <div class="main-row row">
-        <div class="col1 column">
-          <p>levels:</p>
-          <p id="foodLevel"></p>
-          <p id="attentionLevel"></p>
-          <p id="sleepLevel"></p>
-        </div>
-        <div class="col2 column">
-          <div class="giphy">
-            <!-- <img src="https://media2.giphy.com/media/GwdqEhLsBgyg8/giphy.gif" alt="alt"> -->
+        <div class="main-row">
+          <!-- health levels -->
+          <div class="column">
+            <p>levels:</p>
+            <div class="progress">
+              <div class="progress-bar" id="food" style="width: 100%">food</div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" id="attention" style="width: 100%">attention</div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" id="sleep" style="width: 100%">sleep</div>
+            </div>
           </div>
-          <!-- <img id="alive-img" src="./css/img/gif.gif" alt="gif">
-          <img id="dead-img" src="./css/img/dead.gif" alt="dead-gif"> -->
+
+          <!-- //image -->
+          <div class="column">
+            <div class="giphy">
+            </div>
+          </div>
+
+          <!-- buttons -->
+          <div class="column buttons">
+            <button id="feed">feed</button>
+            <button id="play">play</button>
+            <button id="sleep-btn">sleep</button>
+          </div>
         </div>
-        <div class="col3 column">
-          <p id="poorCarePoints"></p>
+
+        <!-- health -->
+        <div class="health-row column">
+          <div class="progress">
+            <div class="progress-bar" id="health" style="width: 100%">health</div>
+          </div>
         </div>
       </div>
 
-
-      <div class="button-row row">
-
-        <button id="feed">feed</button>
-        <button id="play">play</button>
-        <button id="sleep">sleep</button>
-
-      </div>
-      <!-- <div class="row"> -->
-        <button id="start">create new life</button>
-      <!-- </div> -->
+      <button id="start">create new life</button>
 
     </div>
   </body>

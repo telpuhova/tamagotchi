@@ -47,6 +47,10 @@ export class Tamagotchi {
     return this.lifeStage;
   }
 
+  getSurvivability() {
+    return this.survivability;
+  }
+
   settings(timeUnit, timeUnitsInADay, daysPerStage, survivability, lifeExpectancy) {
     this.timeUnit = timeUnit;
     this.timeUnitsInADay = timeUnitsInADay;
@@ -120,7 +124,7 @@ export class Tamagotchi {
         this.poorCarePoints += 2;
       }
       if (this.attentionLevel === 0) {
-        this.poorCarePoints += 1;
+        this.poorCarePoints += 2;
       }
       if (this.poorCarePoints != 0) {
         this.poorCarePoints--;
