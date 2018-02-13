@@ -22,6 +22,31 @@ export class Tamagotchi {
   //   this.familyGroup = familyGroupArray[Math.floor(Math.random() * 5)];
   // }
 
+
+  getFoodLevel() {
+    return this.foodLevel;
+  }
+
+  getSleepLevel() {
+    return this.sleepLevel;
+  }
+
+  getAttentionLevel() {
+    return this.attentionLevel;
+  }
+
+  getName() {
+    return this.name;
+  }
+
+  getPoorCarePoints() {
+    return this.poorCarePoints;
+  }
+
+  getLifeStage() {
+    return this.lifeStage;
+  }
+
   settings(timeUnit, timeUnitsInADay, daysPerStage, survivability, lifeExpectancy) {
     this.timeUnit = timeUnit;
     this.timeUnitsInADay = timeUnitsInADay;
@@ -42,7 +67,7 @@ export class Tamagotchi {
     this.attentionLevel = 10;
   }
 
-  rest() {
+  sleep() {
     this.sleepLevel = 10;
   }
 
@@ -97,11 +122,13 @@ export class Tamagotchi {
       if (this.attentionLevel === 0) {
         this.poorCarePoints += 1;
       }
+      if (this.poorCarePoints != 0) {
+        this.poorCarePoints--;
+      }
     }, this.timeUnit);
   }
 
   timeToDie() {
-    // if ((this.poorCarePoints >= this.survivability) || (this.lifeStage >= this.lifeExpectancy)) {
     if ((this.poorCarePoints >= this.survivability) || (this.lifeStage >= this.lifeExpectancy)){
       return true;
     }

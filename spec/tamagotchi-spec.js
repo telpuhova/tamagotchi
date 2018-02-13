@@ -96,7 +96,7 @@ describe('tamagotchi-spec', function() {
 
     pet.feed();
     pet.play();
-    pet.rest();
+    pet.sleep();
     jasmine.clock().tick(pet.timeUnit);
     expect(pet.poorCarePoints).toEqual(6); //doesn't increment when everything is fine
   });
@@ -143,7 +143,7 @@ describe('tamagotchi-spec', function() {
     pet.start();
     while(!pet.timeToDie()) {
       jasmine.clock().tick(pet.timeUnit);
-      pet.rest();
+      pet.sleep();
       pet.play();
     }
 
@@ -206,7 +206,7 @@ describe('tamagotchi-spec', function() {
     while(!pet.timeToDie()) {
       jasmine.clock().tick(pet.timeUnit);
       pet.feed();
-      pet.rest();
+      pet.sleep();
     }
 
     console.log('--after--');
@@ -237,7 +237,7 @@ describe('tamagotchi-spec', function() {
     while(!pet.timeToDie()) {
       jasmine.clock().tick(pet.timeUnit);
       pet.feed();
-      pet.rest();
+      pet.sleep();
       pet.play();
     }
 

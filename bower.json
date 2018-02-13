@@ -1,0 +1,19 @@
+{
+  "name": "tamagotchi",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "^2.20.1",
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.0.0"
+  }
+}
