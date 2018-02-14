@@ -63,6 +63,8 @@ $(document).ready(function() {
   //create new life button CLICK------------------------------------------------
   $("#start").click(function() {
 
+    $("#settings-btn").disabled = true;
+
     /*
     $.ajax({
       // $.get("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5");

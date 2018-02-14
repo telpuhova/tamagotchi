@@ -1,14 +1,23 @@
 #settings {
+  margin-left: 5px;
   display: none;
   font-size: 10pt;
   border: solid lightgrey 1px;
-  width: 300px;
+  width: 305px;
   padding: 10px;
   background-color: #f2f2f2;
 }
 
 #settings input {
   height: 20px;
+}
+
+#settings label {
+  margin-left: 10px;
+}
+
+#settings p {
+  margin-left: 0px;
 }
 
 #settings-btn {
