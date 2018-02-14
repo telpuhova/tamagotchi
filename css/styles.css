@@ -1,9 +1,31 @@
+#settings {
+  display: none;
+  font-size: 10pt;
+  border: solid lightgrey 1px;
+  width: 300px;
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+
+#settings input {
+  height: 20px;
+}
+
+#settings-btn {
+  /*margin-left: 170px;*/
+}
+
 h1 {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 button {
   margin: 5px;
+}
+
+.icon {
+  width: 20px;
+  margin-bottom: 10px;
 }
 
 img {

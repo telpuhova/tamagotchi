@@ -10,6 +10,12 @@ $(document).ready(function() {
   let upsetId = 'hgjCZLrt7kYrm';
   let gameOverId = 'rcGuQhEyhQlgs';
 
+  let normalUrl = '';
+  let eggUrl = '';
+  let upsetUrl = '';
+  let gameOverUrl = '';
+
+
   //add egg gif before the click
   $.ajax({
     // $.get("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5");
@@ -19,8 +25,6 @@ $(document).ready(function() {
       format: 'json'
     },
     success: function(response) {
-      // $(".giphy-test").append(response.data.images.original.url);
-
       $(".giphy").append(`<img src='${response.data.images.original.url}' alt='egg gif from giphy api'>`);
     },
     error: function() {
@@ -29,9 +33,35 @@ $(document).ready(function() {
   });
 
 
-  //create new life button CLICK
-  $("#start").click(function() {
+  let pet = new Tamagotchi("sofi");
 
+  //settings:
+  $("#settings-name").val(pet.getName());
+  $("#timeUnit").val(pet.timeUnit);
+  $("#timeUnitsInADay").val(pet.timeUnitsInADay);
+  $("#daysPerStage").val(pet.daysPerStage);
+  $("#survivability").val(pet.survivability);
+  $("#lifeExpectancy").val(pet.lifeExpectancy);
+
+
+  $("#settings-icon").click(function() {
+    $("#settings").toggle();
+  });
+
+  $("#settings-form").submit(function(event) {
+    event.preventDefault();
+    pet.name = $("#settings-name").val();
+    pet.timeUnit = $("#timeUnit").val();
+    pet.timeUnitsInADay = $("#timeUnitsInADay").val();
+    pet.daysPerStage = $("#daysPerStage").val();
+    pet.survivability = $("#survivability").val();
+    pet.lifeExpectancy = $("#lifeExpectancy").val();
+    $("#settings").toggle();
+  });
+
+
+  //create new life button CLICK------------------------------------------------
+  $("#start").click(function() {
 
     /*
     $.ajax({
@@ -69,20 +99,17 @@ $(document).ready(function() {
 
 */
 
-    let pet = new Tamagotchi("sofi");
+
     $("#name").text(`name: ${pet.getName()}`);
 
     //add a normal alive creature gif
     $.ajax({
-      // $.get("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5");
       url: `http://api.giphy.com/v1/gifs/${normalId}?api_key=${apiKey}`,
       type: 'GET',
       data: {
         format: 'json'
       },
       success: function(response) {
-
-        // $("#egg").remove();
         $(".giphy").empty();
         $(".giphy").append(`<img src='${response.data.images.original.url}' alt='normal gif from giphy api'>`);
       },
@@ -104,6 +131,8 @@ $(document).ready(function() {
         $("#age").text(`age: ${"teen"}`);
         break;
         case 3:
+        $("#age").text(`age: ${"adult"}`);
+        default:
         $("#age").text(`age: ${"adult"}`);
         break;
       }
