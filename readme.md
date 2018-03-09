@@ -6,7 +6,7 @@ Tamagotchi app, 2/12/2018
 
 ## Description
 
-An application that emulates a tamagotchi game.
+An application that emulates a tamagotchi game. Ajax api call and fat arrow notation practice.
 
 ## Setup
 
